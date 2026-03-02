@@ -11,8 +11,5 @@ use Generated\Shared\Transfer\IndexedOrderMatrixResponseTransfer;
 
 interface OrderMatrixGuiToOrderMatrixFacadeInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\IndexedOrderMatrixResponseTransfer
-     */
     public function getOrderMatrixStatistics(): IndexedOrderMatrixResponseTransfer;
 }

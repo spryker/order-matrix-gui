@@ -21,9 +21,6 @@ use Spryker\Zed\OrderMatrixGui\OrderMatrixGuiDependencyProvider;
  */
 class OrderMatrixGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\OrderMatrixGui\Communication\Formatter\OrderMatrixFormatterInterface
-     */
     public function createOrderMatrixFormatter(): OrderMatrixFormatterInterface
     {
         return new OrderMatrixFormatter(
@@ -33,25 +30,16 @@ class OrderMatrixGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrixGui\Communication\DataExtractor\OrderMatrixDataExtractorInterface
-     */
     public function createOrderMatrixDataExtractor(): OrderMatrixDataExtractorInterface
     {
         return new OrderMatrixDataExtractor();
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrixGui\Dependency\Facade\OrderMatrixGuiToOrderMatrixFacadeInterface
-     */
     public function getOrderMatrixFacade(): OrderMatrixGuiToOrderMatrixFacadeInterface
     {
         return $this->getProvidedDependency(OrderMatrixGuiDependencyProvider::FACADE_ORDER_MATRIX);
     }
 
-    /**
-     * @return \Spryker\Zed\OrderMatrixGui\Dependency\Service\OrderMatrixGuiToUtilSanitizeServiceInterface
-     */
     public function getUtilSanitizeService(): OrderMatrixGuiToUtilSanitizeServiceInterface
     {
         return $this->getProvidedDependency(OrderMatrixGuiDependencyProvider::SERVICE_UTIL_SANITIZE);

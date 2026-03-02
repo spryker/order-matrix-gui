@@ -53,11 +53,6 @@ class OrderMatrixFormatter implements OrderMatrixFormatterInterface
      */
     protected const COLON_DELIMITER = ':';
 
-    /**
-     * @param \Spryker\Zed\OrderMatrixGui\Dependency\Service\OrderMatrixGuiToUtilSanitizeServiceInterface $utilSanitizeService
-     * @param \Spryker\Zed\OrderMatrixGui\Communication\DataExtractor\OrderMatrixDataExtractorInterface $orderMatrixDataExtractor
-     * @param \Spryker\Zed\OrderMatrixGui\OrderMatrixGuiConfig $orderMatrixGuiConfig
-     */
     public function __construct(
         protected OrderMatrixGuiToUtilSanitizeServiceInterface $utilSanitizeService,
         protected OrderMatrixDataExtractorInterface $orderMatrixDataExtractor,

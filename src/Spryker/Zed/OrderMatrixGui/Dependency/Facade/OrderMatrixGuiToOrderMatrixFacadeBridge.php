@@ -24,9 +24,6 @@ class OrderMatrixGuiToOrderMatrixFacadeBridge implements OrderMatrixGuiToOrderMa
         $this->orderMatrixFacade = $orderMatrixFacade;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\IndexedOrderMatrixResponseTransfer
-     */
     public function getOrderMatrixStatistics(): IndexedOrderMatrixResponseTransfer
     {
         return $this->orderMatrixFacade->getOrderMatrixStatistics();

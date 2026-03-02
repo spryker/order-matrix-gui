@@ -27,11 +27,6 @@ class OrderMatrixGuiDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const SERVICE_UTIL_SANITIZE = 'SERVICE_UTIL_SANITIZE';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -42,11 +37,6 @@ class OrderMatrixGuiDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addOrderMatrixFacade(Container $container): Container
     {
         $container->set(static::FACADE_ORDER_MATRIX, function (Container $container) {
@@ -56,11 +46,6 @@ class OrderMatrixGuiDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addUtilSanitizeService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_SANITIZE, function (Container $container) {
