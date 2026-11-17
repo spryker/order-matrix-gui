@@ -88,7 +88,7 @@ class OrderMatrixFormatter implements OrderMatrixFormatterInterface
      */
     protected function formatStateResult(string $stateKey, array $grid, array $processNames, array $stateNames): array
     {
-        [$stateId, $stateName] = explode(static::COLON_DELIMITER, $stateKey, 2);
+        [$stateId] = explode(static::COLON_DELIMITER, $stateKey, 2);
         $result = [
             static::COL_STATE => $stateNames[(int)$stateId],
         ];
